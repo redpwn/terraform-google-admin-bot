@@ -1,11 +1,11 @@
 variable "prefix" {
   type = string
   default = "admin-bot"
-  description = "Prefix for all resources"
+  description = "Prefix for all GCP resources created by the module"
 }
 variable "image" {
   type = string
-  description = "URI for redpwn/admin-bot based image on gcr.io or pkg.dev"
+  description = "Docker image URI on gcr.io or docker.pkg.dev with redpwn/admin-bot base"
 }
 variable "recaptcha" {
   type = object({
