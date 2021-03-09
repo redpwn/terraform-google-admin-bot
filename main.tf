@@ -36,7 +36,7 @@ resource google_cloud_run_service submit {
           value = var.recaptcha.secret
         }
       }
-      container_concurrency = 100
+      container_concurrency = var.submit_concurrency
       timeout_seconds = 10
       service_account_name = google_service_account.submit.account_id
     }
@@ -88,7 +88,7 @@ resource google_cloud_run_service visit {
           value = "visit"
         }
       }
-      container_concurrency = 5
+      container_concurrency = var.visit_concurrency
       timeout_seconds = 70
       service_account_name = google_service_account.visit.account_id
     }
