@@ -26,3 +26,13 @@ variable "visit_max_scale" {
   default     = 10
   description = "Maximum concurrent visit instances"
 }
+variable "submit_annotations" {
+  type        = map(string)
+  default     = {}
+  description = "Additional annotations to apply to submit instances"
+}
+variable "visit_annotations" {
+  type        = map(string)
+  default     = {}
+  description = "Additional annotations to apply to visit instances"
+}
