@@ -38,8 +38,6 @@ resource "google_cloud_run_service" "submit" {
     metadata {
       annotations = merge({
         "autoscaling.knative.dev/maxScale" = var.submit_max_scale
-
-        "run.googleapis.com/sandbox" = "gvisor"
       }, var.submit_annotations)
     }
   }
@@ -94,8 +92,6 @@ resource "google_cloud_run_service" "visit" {
     metadata {
       annotations = merge({
         "autoscaling.knative.dev/maxScale" = var.visit_max_scale
-
-        "run.googleapis.com/sandbox" = "gvisor"
       }, var.visit_annotations)
     }
   }
