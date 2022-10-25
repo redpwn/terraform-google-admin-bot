@@ -95,7 +95,11 @@ resource "google_cloud_run_service" "visit" {
       }, var.visit_annotations)
     }
   }
-
+  metadata {
+    annotations = {
+      "run.googleapis.com/ingress" = "internal"
+    }
+  }
   traffic {
     percent         = 100
     latest_revision = true

@@ -5,7 +5,7 @@ variable "prefix" {
 }
 variable "image" {
   type        = string
-  description = "Docker image URI on gcr.io or pkg.dev with redpwn/admin-bot base"
+  description = "Docker image URI on gcr.io or pkg.dev with pwn.red/admin-bot base"
 }
 variable "recaptcha" {
   type = object({
